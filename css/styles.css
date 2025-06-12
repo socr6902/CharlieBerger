@@ -24,7 +24,7 @@
     width: 100%;
     top: 0;
     z-index: 100;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0,0,0,0)); /* gradient fade */
+    
     box-shadow: none;
   }
 
@@ -74,39 +74,47 @@
   
   
   /* Hero Image Fullscreen with Overlay */
-.hero-image {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-image: url('../images/expand-hero\ copy\ 2.jpeg'); /* update path */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 1;
-}
-
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  font-family: "guildhall-compressed", sans-serif;
-font-weight: 400;
-font-style: normal;
-  color: rgb(255, 166, 0);
-  font-size: 12rem;
-  text-align: left;
-  line-height: 1.1;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 8px rgb(82, 82, 82);
-
-
-  /* ADD THIS ↓ */
-  margin-left: 50vw; /* adjust this value as needed */
-}
+  .hero-image {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/expand-hero\ copy\ 5.jpeg'); /* update path */
+    background-size: cover;
+    background-position: 40% center; /* shift image to the left */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* move content to right */
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .hero-image::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    font-family: "guildhall-compressed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 166, 0);
+    font-size: 8rem;
+    text-align: left;
+    line-height: 1.1;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    
+    padding-right: 5rem;
+  }
+  
 
   
   
