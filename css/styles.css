@@ -70,7 +70,7 @@ body {
   top: 0;
   height: 100%;
   width: 90%; 
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) 60%, transparent 100%);
   z-index: 1;
 }
 
