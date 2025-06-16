@@ -5,7 +5,9 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Lora', serif;
+  font-family: "bebas-neue-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   overflow-x: hidden;
   color: white;
 }
@@ -25,7 +27,7 @@ body {
   box-shadow: none;
 }
 .navbar-brand {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(255, 166, 0);
   font-family: "bebas-neue-pro-semiexpanded", sans-serif;
 }
@@ -35,6 +37,7 @@ body {
   gap: 2rem;
   margin-left: auto;
   margin-right: 10rem;
+  font-size: 1.5rem;
 }
 .nav-link {
   text-decoration: none;
@@ -118,7 +121,7 @@ body {
 
 /* About Text */
 .about-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #f0f0f0;
 
