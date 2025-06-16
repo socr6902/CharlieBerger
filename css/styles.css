@@ -30,7 +30,7 @@ body {
 }
 .navbar-brand {
   font-size: 3rem;
-  color: rgb(255, 166, 0);
+  color: rgb(255, 137, 40);
   font-family: "guildhall-compressed", sans-serif;
 }
 .navbar-nav {
@@ -96,7 +96,7 @@ body {
   font-size: 9.2rem;
   letter-spacing: 10px;
   text-transform: uppercase;
-  color: rgb(255, 166, 0);
+  color: rgb(255, 137, 40);
   margin-bottom: 1rem;
 }
 
