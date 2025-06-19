@@ -16,7 +16,15 @@
   <link rel="stylesheet" href="https://use.typekit.net/vnj1gzr.css">
   
 </head>
+
 <body>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('carousel-track');
+      track.innerHTML += track.innerHTML; // Duplicate images for seamless loop
+    });
+  </script>
+  
   <!-- NAVBAR -->
   <nav class="custom-navbar">
     <div class="navbar-brand">CB</div>
@@ -38,18 +46,41 @@
         Lorem ipsum dolor sit amet, eum et magna singulis tractatos. Agam laudem tritani id ius, eam cu tation prompta deserunt. Pri no possim invenire suscipiantur, pertinax facilisis te nec. Mei an suas justo, probo ridens complectitur sea te. Lorem ipsum dolor sit amet, eum et magna singulis tractatos. Agam laudem tritani id ius, eam cu tation prompta deserunt. Pri no possim invenire suscipiantur, pertinax facilisis te nec. Mei an suas justo, probo ridens complectitur sea te.
       </p>
   
-      <div class="image-row">
-        
-        <div class="carousel">
-          <div class="carousel-track">
+      <div class="carousel">
+        <div class="carousel-track">
+          <a href="images/DSC08678-min.JPEG" target="_blank">
             <img src="images/DSC08678-min.JPEG" alt="Image 1" />
+          </a>
+          <a href="images/IMG_3070-min.jpg" target="_blank">
             <img src="images/IMG_3070-min.jpg" alt="Image 2" />
+          </a>
+          <a href="images/IMG_7513-min.JPEG" target="_blank">
             <img src="images/IMG_7513-min.JPEG" alt="Image 3" />
-            <img src="images/DSC08678-min.JPEG" alt="Image 4" />
-            <img src="images/IMG_3070-min.jpg" alt="Image 5" />
-          </div>
+          </a>
+          <a href="images/IMG_1531.jpeg" target="_blank">
+            <img src="images/IMG_1531.jpeg" alt="Image 4" />
+          </a>
+          <a href="images/IMG_1393.jpeg" target="_blank">
+            <img src="images/IMG_1393.jpeg" alt="Image 5" />
+          </a>
+          <a href="images/OPD-077.jpeg" target="_blank">
+            <img src="images/OPD-077.jpeg" alt="Image 6" />
+          </a>
+          <a href="images/AFF0C95A-AAC1-48C2-B381-F5BA140B5386.jpeg" target="_blank">
+            <img src="images/AFF0C95A-AAC1-48C2-B381-F5BA140B5386.jpeg" alt="Image 7" />
+          </a>
+          <a href="images/IMG_2113.JPG" target="_blank">
+            <img src="images/IMG_2113.JPG" alt="Image 8" />
+          </a>
+          <a href="images/IMG_9562.jpeg" target="_blank">
+            <img src="images/IMG_9562.jpeg" alt="Image 9" />
+          </a>
+          <a href="images/DRUNKENCITY-189.jpeg" target="_blank">
+            <img src="images/DRUNKENCITY-189.jpeg" alt="Image 10" />
+          </a>
         </div>
-      </div>  
+      </div>
+      
   
       
     </div>
