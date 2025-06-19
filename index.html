@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Charlie Berger</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 
   <link rel="stylesheet" href="https://use.typekit.net/vnj1gzr.css">
   <link rel="stylesheet" href="https://use.typekit.net/vnj1gzr.css">
@@ -19,12 +21,11 @@
 
 <body>
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const track = document.getElementById('carousel-track');
-      track.innerHTML += track.innerHTML; // Duplicate images for seamless loop
-    });
-  </script>
-  
+  window.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('carousel-track');
+  });
+</script>
+
   <!-- NAVBAR -->
   <nav class="custom-navbar">
     <div class="navbar-brand">CB</div>
@@ -39,6 +40,7 @@
   
 
   <div class="hero-image">
+    
     <div class="hero-overlay">
       <h1 class="hero-text">Charlie Berger</h1>
 
@@ -46,46 +48,128 @@
         Lorem ipsum dolor sit amet, eum et magna singulis tractatos. Agam laudem tritani id ius, eam cu tation prompta deserunt. Pri no possim invenire suscipiantur, pertinax facilisis te nec. Mei an suas justo, probo ridens complectitur sea te. Lorem ipsum dolor sit amet, eum et magna singulis tractatos. Agam laudem tritani id ius, eam cu tation prompta deserunt. Pri no possim invenire suscipiantur, pertinax facilisis te nec. Mei an suas justo, probo ridens complectitur sea te.
       </p>
   
-      <div class="carousel">
-        <div class="carousel-track">
-          <a href="images/DSC08678-min.JPEG" target="_blank">
-            <img src="images/DSC08678-min.JPEG" alt="Image 1" />
-          </a>
-          <a href="images/IMG_3070-min.jpg" target="_blank">
-            <img src="images/IMG_3070-min.jpg" alt="Image 2" />
-          </a>
-          <a href="images/IMG_7513-min.JPEG" target="_blank">
-            <img src="images/IMG_7513-min.JPEG" alt="Image 3" />
-          </a>
-          <a href="images/IMG_1531.jpeg" target="_blank">
-            <img src="images/IMG_1531.jpeg" alt="Image 4" />
-          </a>
-          <a href="images/IMG_1393.jpeg" target="_blank">
-            <img src="images/IMG_1393.jpeg" alt="Image 5" />
-          </a>
-          <a href="images/OPD-077.jpeg" target="_blank">
-            <img src="images/OPD-077.jpeg" alt="Image 6" />
-          </a>
-          <a href="images/AFF0C95A-AAC1-48C2-B381-F5BA140B5386.jpeg" target="_blank">
-            <img src="images/AFF0C95A-AAC1-48C2-B381-F5BA140B5386.jpeg" alt="Image 7" />
-          </a>
-          <a href="images/IMG_2113.JPG" target="_blank">
-            <img src="images/IMG_2113.JPG" alt="Image 8" />
-          </a>
-          <a href="images/IMG_9562.jpeg" target="_blank">
-            <img src="images/IMG_9562.jpeg" alt="Image 9" />
-          </a>
-          <a href="images/DRUNKENCITY-189.jpeg" target="_blank">
-            <img src="images/DRUNKENCITY-189.jpeg" alt="Image 10" />
-          </a>
-        </div>
-      </div>
+      <div class="carousel-container">
+        <button class="carousel-btn left" id="carousel-prev">
+          <i class="bi bi-caret-left"></i>
+        </button>
+        <div class="carousel">
       
+          <div class="carousel-track" id="carousel-track">
+            <a href="images/DSC08678-min.JPEG" target="_blank">
+              <img src="images/DSC08678-min.JPEG" alt="Image 1" />
+            </a>
+            <a href="images/IMG_3070-min.jpg" target="_blank">
+              <img src="images/IMG_3070-min.jpg" alt="Image 2" />
+            </a>
+            <a href="images/IMG_7513-min.JPEG" target="_blank">
+              <img src="images/IMG_7513-min.JPEG" alt="Image 3" />
+            </a>
+            <a href="images/IMG_1531.jpeg" target="_blank">
+              <img src="images/IMG_1531.jpeg" alt="Image 4" />
+            </a>
+            <a href="images/IMG_1393.jpeg" target="_blank">
+              <img src="images/IMG_1393.jpeg" alt="Image 5" />
+            </a>
+            <a href="images/OPD-077.jpeg" target="_blank">
+              <img src="images/OPD-077.jpeg" alt="Image 6" />
+            </a>
+            <a href="images/AFF0C95A-AAC1-48C2-B381-F5BA140B5386.jpeg" target="_blank">
+              <img src="images/AFF0C95A-AAC1-48C2-B381-F5BA140B5386.jpeg" alt="Image 7" />
+            </a>
+            <a href="images/IMG_2113.JPG" target="_blank">
+              <img src="images/IMG_2113.JPG" alt="Image 8" />
+            </a>
+            <a href="images/IMG_9562.jpeg" target="_blank">
+              <img src="images/IMG_9562.jpeg" alt="Image 9" />
+            </a>
+            <a href="images/DRUNKENCITY-189.jpeg" target="_blank">
+              <img src="images/DRUNKENCITY-189.jpeg" alt="Image 10" />
+            </a>
+          </div>
+        </div>
+        <button class="carousel-btn right" id="carousel-next">
+          <i class="bi bi-caret-right"></i>
+        </button>
+        
+      </div>      
+      <div class="carousel-caption" id="carousel-caption">Caption goes here</div>
   
       
     </div>
   </div>
   
+  <script>
+    // caption
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("carousel-track");
+  const images = track.querySelectorAll("img");
+  const prevBtn = document.getElementById("carousel-prev");
+  const nextBtn = document.getElementById("carousel-next");
+  const captionEl = document.getElementById("carousel-caption");
+
+  const captions = [
+    "Caption 1",
+    "Caption 2",
+    "Caption 3",
+    "Caption 4",
+    "Caption 5",
+    "Caption 6",
+    "Caption 7",
+    "Caption 8",
+    "Caption 9",
+    "Caption 10"
+  ];
+
+  let index = 0;
+
+  function scrollToImage(i) {
+    const img = images[i];
+    const imgLeft = img.offsetLeft;
+    track.style.transform = `translateX(-${imgLeft}px)`;
+    captionEl.textContent = captions[i];
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    scrollToImage(index);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    scrollToImage(index);
+  });
+
+  // Initialize first caption
+  scrollToImage(index);
+});
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.getElementById("carousel-track");
+      const images = track.querySelectorAll("img");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+  
+      let index = 0;
+  
+      function scrollToImage(i) {
+        const img = images[i];
+        const imgLeft = img.offsetLeft;
+        track.style.transform = `translateX(-${imgLeft}px)`;
+      }
+  
+      nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        scrollToImage(index);
+      });
+  
+      prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        scrollToImage(index);
+      });
+    });
+  </script>
   
 
   
