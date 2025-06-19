@@ -59,14 +59,14 @@
             <a href="images/DRUNKENCITY-189-min.jpeg" target="_blank">
               <img src="images/DRUNKENCITY-189-min.jpeg" alt="Image 10" />
             </a>
-            <a href="images/IMG_2113-min.JPG" target="_blank">
-              <img src="images/IMG_2113-min.JPG" alt="Image 8" />
+            <a href="images/OPD-077-min.jpeg" target="_blank">
+              <img src="images/OPD-077-min.jpeg" alt="Image 6" />
             </a>
             <a href="images/DSC08678-min.JPEG" target="_blank">
               <img src="images/DSC08678-min.JPEG" alt="Image 1" />
             </a>
-            <a href="images/OPD-077-min.jpeg" target="_blank">
-              <img src="images/OPD-077-min.jpeg" alt="Image 6" />
+            <a href="images/IMG_2113-min.JPG" target="_blank">
+              <img src="images/IMG_2113-min.JPG" alt="Image 8" />
             </a>
             <a href="images/IMG_3070-min.jpg" target="_blank">
               <img src="images/IMG_3070-min.jpg" alt="Image 2" />
@@ -101,77 +101,72 @@
   </div>
   
   <script>
-    // caption
-
-    document.addEventListener("DOMContentLoaded", () => {
-  const track = document.getElementById("carousel-track");
-  const images = track.querySelectorAll("img");
-  const prevBtn = document.getElementById("carousel-prev");
-  const nextBtn = document.getElementById("carousel-next");
-  const captionEl = document.getElementById("carousel-caption");
-
-  const captions = [
-    "Caption 1",
-    "Caption 2",
-    "Caption 3",
-    "Caption 4",
-    "Caption 5",
-    "Caption 6",
-    "Caption 7",
-    "Caption 8",
-    "Caption 9",
-    "Caption 10"
-  ];
-
-  let index = 0;
-
-  function scrollToImage(i) {
-    const img = images[i];
-    const imgLeft = img.offsetLeft;
-    track.style.transform = `translateX(-${imgLeft}px)`;
-    captionEl.textContent = captions[i];
-  }
-
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % images.length;
-    scrollToImage(index);
-  });
-
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + images.length) % images.length;
-    scrollToImage(index);
-  });
-
-  // Initialize first caption
-  scrollToImage(index);
-});
-
-
     document.addEventListener("DOMContentLoaded", () => {
       const track = document.getElementById("carousel-track");
       const images = track.querySelectorAll("img");
       const prevBtn = document.getElementById("carousel-prev");
       const nextBtn = document.getElementById("carousel-next");
-  
+      const captionEl = document.getElementById("carousel-caption");
+    
+      const captions = [
+        "Caption 1",
+        "Caption 2",
+        "Caption 3",
+        "Caption 4",
+        "Caption 5",
+        "Caption 6",
+        "Caption 7",
+        "Caption 8",
+        "Caption 9",
+        "Caption 10"
+      ];
+    
       let index = 0;
-  
+      let autoScrollActive = true;
+    
       function scrollToImage(i) {
         const img = images[i];
         const imgLeft = img.offsetLeft;
         track.style.transform = `translateX(-${imgLeft}px)`;
+        captionEl.textContent = captions[i];
       }
-  
-      nextBtn.addEventListener("click", () => {
+    
+      function nextImage() {
         index = (index + 1) % images.length;
         scrollToImage(index);
-      });
-  
-      prevBtn.addEventListener("click", () => {
+      }
+    
+      function prevImage() {
         index = (index - 1 + images.length) % images.length;
         scrollToImage(index);
+      }
+    
+      // Auto-scroll every 3 seconds
+      let autoScroll = setInterval(() => {
+        if (autoScrollActive) nextImage();
+      }, 5000);
+    
+      function disableAutoScroll() {
+        autoScrollActive = false;
+        clearInterval(autoScroll);
+      }
+    
+      // Attach events
+      nextBtn.addEventListener("click", () => {
+        disableAutoScroll();
+        nextImage();
       });
+    
+      prevBtn.addEventListener("click", () => {
+        disableAutoScroll();
+        prevImage();
+      });
+    
+      // Initialize first state
+      scrollToImage(index);
     });
-  </script>
+    </script>
+    
   
 
   
