@@ -5,51 +5,75 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "bebas-neue-pro", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  overflow-x: hidden;
+  font-family: "Karla", sans-serif;
+  font-weight: 100;
   color: white;
+  overflow-x: hidden;
+  
 }
 
-/* Navbar */
+/* Navbar Container */
 .custom-navbar {
-  font-family: "bebas-neue-pro", sans-serif;
-  font-weight: 300;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  font-weight: 400;
-  font-size: 1.2rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
-  box-shadow: none;
 }
+
+/* Logo */
 .navbar-brand {
   font-size: 3rem;
   color: rgb(255, 137, 40);
   font-family: "marvin", sans-serif;
 }
+
+/* Nav List */
 .navbar-nav {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   margin-left: auto;
-  margin-right: 10rem;
-  font-size: 1.5rem;
+  margin-right: 2rem;
+  align-items: center;
+  
 }
-.nav-link {
-  text-decoration: none;
+
+/* Nav Link with Overline Animation */
+.btn-text-stretch {
+  position: relative;
+  font-family: "Karla", sans-serif;
+  font-size: 1.3rem;
   color: white;
-  font-weight: 400;
-  padding: 20px;
+  text-decoration: none;
+  transition: letter-spacing 0.3s ease;
+  padding: 0.5rem 0;
 }
-.nav-link:hover {
-  text-decoration: underline;
+
+.btn-text-stretch:hover {
+  color: rgb(255, 137, 40);
+  letter-spacing: 1px;
 }
+
+/* Sliding Overline */
+.btn-text-stretch::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5px;
+  width: 0;
+  background-color: rgb(255, 137, 40);
+  transition: width 0.4s ease-in-out;
+}
+
+.btn-text-stretch:hover::before {
+  width: 100%;
+}
+
 .navbar-icons {
   display: flex;
   gap: 1rem;
@@ -61,11 +85,51 @@ body {
   color: rgb(255, 137, 40);
   font-size: 1.6rem;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .icon-link:hover {
   opacity: 0.8;
 }
+
+.hamburger {
+  position: absolute;
+  display: none;
+  font-size: 2rem;
+  color: rgb(255, 137, 40);
+  cursor: pointer;
+  right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  body.menu-open .hero-overlay,
+  body.menu-open .image-row,
+  body.menu-open .about-text,
+  body.menu-open .carousel-container {
+    padding-top: 180px; /* Adjust based on dropdown height */
+  }
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-icons {
+    display: none;
+  }
+}
+
+
 
 
 
@@ -76,13 +140,14 @@ body {
   width: 100%;
   background-image: url('../images/expand-hero\ copy\ 5-min.jpeg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 0%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 8rem 5rem 4rem; 
+  padding: 7.5rem 5rem 4rem; 
   box-sizing: border-box;
   overflow: hidden;
+  
 } 
 
 .hero-image::after {
@@ -93,6 +158,7 @@ body {
   height: 100%;
   width: 90%; 
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) 75%, transparent 100%);
+
   z-index: 1;
 }
 
@@ -142,10 +208,10 @@ body {
 
 /* About Text */
 .about-text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #ffffff;
-
+  font-weight: 100;
   border-radius: 8px;
   margin-top: 0.5rem;
 }
@@ -216,10 +282,11 @@ body {
 
 .carousel-caption {
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: white;
-  font-family: "bebas-neue-pro", sans-serif;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Karla", sans-serif;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 4px 8px;
   border-radius: 6px;
   max-width: 100%;
