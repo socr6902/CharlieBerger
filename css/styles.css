@@ -95,11 +95,13 @@ body {
 
 .hamburger {
   position: absolute;
+  border: none;
   display: none;
   font-size: 2rem;
   color: rgb(255, 137, 40);
   cursor: pointer;
   right: 1.5rem;
+  background: transparent;
 }
 @media (max-width: 1300px) {
   .navbar-brand {
