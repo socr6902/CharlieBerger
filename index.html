@@ -195,6 +195,26 @@
   });
 </script>
 
+<script>
+  function updateOverlay() {
+    const hero = document.querySelector('.hero-image');
+    const width = window.innerWidth;
+    let opacity = 0;
+
+    if (width < 1300) opacity = 0.3;
+    if (width < 1100) opacity = 0.4;
+    if (width < 900)  opacity = 0.5;
+    if (width < 700)  opacity = 0.6;
+    if (width < 500)  opacity = 0.75;
+
+    hero.style.setProperty('--overlay-darkness', opacity);
+  }
+
+  window.addEventListener('resize', updateOverlay);
+  window.addEventListener('load', updateOverlay);
+</script>
+
+
   
 </body>
 </html>
