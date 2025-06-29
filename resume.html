@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume</title>
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -13,151 +13,166 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <style>
-    body{
-        background-color: #0e1111;
+    body {
+      background-color: #0e1111;
     }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #ff8928;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
     .resume-heading {
-        font-family: "marvin", sans-serif;
-        font-size: 3rem;
-        color: rgb(255, 137, 40);
-        text-align: left;
-        margin-bottom: 2rem;
-        padding-left: 20px;
+      font-family: "marvin", sans-serif;
+      font-size: 3rem;
+      color: rgb(255, 137, 40);
+      text-align: left;
+      margin-bottom: 2rem;
+      padding-left: 20px;
     }
 
     .resume-layout {
-        padding-top: 5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-bottom: 30px;
+      padding-top: 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 30px;
     }
 
     .resume-title {
-        visibility: hidden;
+      visibility: hidden;
     }
 
     .resume-container {
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .resume-column {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding-left: 20px;
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-left: 20px;
     }
 
     .resume-item {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-bottom: 20px;
     }
 
     .resume-img {
-        width: 100%;
+      width: 100%;
     }
 
     .headshot-column {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding-right: 20px;
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-right: 20px;
     }
 
     .headshot-img {
-        width: 100%;
-        object-fit: cover;
+      width: 100%;
+      object-fit: cover;
     }
 
     @media (max-width: 600px) {
-        .resume-container {
-            flex-direction: column;
-        }
+      .resume-container {
+        flex-direction: column;
+      }
 
-        .headshot-column {
-            order: 1;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
+      .headshot-column {
+        order: 1;
+        padding: 0 20px;
+      }
 
-        .resume-column {
-            order: 2;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+      .resume-column {
+        order: 2;
+        padding: 0 20px;
+      }
 
-        .headshot-img,
-        .resume-img {
-            width: 100%;
-            height: auto;
-        }
+      .headshot-img,
+      .resume-img {
+        width: 100%;
+        height: auto;
+      }
 
-        .resume-heading {
-            width: 100%;
-            font-size: clamp(2.5rem, 4vw, 3rem); /* Scales with screen size */
-            font-family: "marvin", sans-serif;
-            color: rgb(255, 137, 40);
-            text-align: center; /* You can use left if preferred */
-            margin-bottom: 2rem;
-            padding-left: 0px;
-        }
+      .resume-heading {
+        width: 100%;
+        font-size: clamp(2.5rem, 4vw, 3rem);
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-left: 0px;
+      }
     }
+
     .image-wrapper {
-        position: relative;
+      position: relative;
     }
 
     .download-icon {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        background-color: rgba(255, 137, 40, 0.9);
-        color: white;
-        border-radius: 50%;
-        padding: 0.5rem;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: background-color 0.3s;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(255, 137, 40, 0.9);
+      color: white;
+      border-radius: 50%;
+      padding: 0.5rem;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s;
     }
 
     .download-icon:hover {
-        background-color: rgb(255, 100, 20);
+      background-color: rgb(255, 100, 20);
     }
 
     .download-all-btn {
-        margin-top: 1rem;
-        padding: 0.75rem 1.75rem;
-        font-size: 1rem;
-        font-family: "lato", sans-serif;
-        font-weight: 600;
-        color: white;
-        background-color: rgb(255, 137, 40);
-        border: none;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        display: inline-block;
-        width: fit-content;
+      margin-top: 1rem;
+      padding: 0.75rem 1.75rem;
+      font-size: 1rem;
+      font-family: "lato", sans-serif;
+      font-weight: 600;
+      color: white;
+      background-color: rgb(255, 137, 40);
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      width: fit-content;
     }
 
     .download-all-btn:hover {
-        background-color: rgb(230, 120, 30);
+      background-color: rgb(230, 120, 30);
     }
-    
 
-</style>
+    a:focus, button:focus {
+      outline: 2px solid rgb(255, 137, 40);
+      outline-offset: 4px;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- NAVBAR -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <nav class="custom-navbar">
     <div class="navbar-brand">CB</div>
-
     <ul class="navbar-nav" id="nav-links">
       <li><a href="index.html" class="btn-text-stretch">Home</a></li>
       <li><a href="media.html" class="btn-text-stretch">Media</a></li>
@@ -165,7 +180,6 @@
       <li><a href="writing.html" class="btn-text-stretch">Writing</a></li>
       <li><a href="contact.html" class="btn-text-stretch">Contact</a></li>
     </ul>
-
     <div class="navbar-icons">
       <a href="mailto:charliesamuelberger@gmail.com" class="icon-link" aria-label="Email">
         <i class="fas fa-envelope"></i>
@@ -174,77 +188,60 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
-
     <div class="hamburger" id="hamburger">
       <i class="fas fa-bars"></i>
     </div>
   </nav>
 
-  <!-- PAGE CONTENT -->
-  <!-- Only showing from <main> for clarity — include within full HTML -->
-
-<main class="resume-layout">
-    <h1 class="resume-title">Resume</h1>
+  <main id="main-content" class="resume-layout">
+    <h1 class="resume-title" aria-hidden="true">Resume</h1>
     <h2 class="resume-heading">Headshots & Resume</h2>
-  
+
     <div class="resume-container">
-      <!-- Left Column: Resumes -->
       <div class="resume-column">
-        <div class="resume-item-group">
-          <div class="resume-item">
-            <div class="image-wrapper">
-              <img src="images/resume/artistic.jpg" alt="Acting Resume" class="resume-img" />
-              <a href="downloads/Charlie_Berger_Artistic_Resume.pdf" download class="download-icon">
-                <i class="fas fa-download"></i>
-              </a>
-            </div>
-            <p class="about-text">Acting Résumé (PDF)</p>
+        <div class="resume-item">
+          <div class="image-wrapper">
+            <img src="images/resume/artistic.jpg" alt="Thumbnail of Charlie Berger's Acting Resume" class="resume-img" />
+            <a href="downloads/Charlie_Berger_Artistic_Resume.pdf" download class="download-icon" aria-label="Download Acting Resume PDF">
+              <i class="fas fa-download" aria-hidden="true"></i>
+            </a>
           </div>
-  
-          <div class="resume-item">
-            <div class="image-wrapper">
-              <img src="images/resume/directing.jpg" alt="Directing Resume" class="resume-img" />
-              <a href="downloads/Charlie_Berger_Directing_Resume.pdf" download class="download-icon">
-                <i class="fas fa-download"></i>
-              </a>
-            </div>
-            <p class="about-text">Directing Résumé (PDF)</p>
-          </div>
+          <p class="about-text">Acting Résumé (PDF)</p>
         </div>
-  
+        <div class="resume-item">
+          <div class="image-wrapper">
+            <img src="images/resume/directing.jpg" alt="Thumbnail of Charlie Berger's Directing Resume" class="resume-img" />
+            <a href="downloads/Charlie_Berger_Directing_Resume.pdf" download class="download-icon" aria-label="Download Directing Resume PDF">
+              <i class="fas fa-download" aria-hidden="true"></i>
+            </a>
+          </div>
+          <p class="about-text">Directing Résumé (PDF)</p>
+        </div>
         <a href="downloads/Charlie_Berger.zip" download class="download-all-btn">Download All</a>
       </div>
-  
-      <!-- Right Column: Headshots -->
       <div class="headshot-column">
         <div class="image-wrapper">
-          <img src="images/resume/CharlieBergerHeadshot-min.JPEG" alt="Headshot 1" class="headshot-img" />
-          <a href="images/headshot1.jpg" download="Charlie_Headshot_1" class="download-icon">
-            <i class="fas fa-download"></i>
+          <img src="images/resume/CharlieBergerHeadshot-min.JPEG" alt="Professional headshot of Charlie Berger, smiling" class="headshot-img" />
+          <a href="images/headshot1.jpg" download="Charlie_Headshot_1" class="download-icon" aria-label="Download Headshot 1">
+            <i class="fas fa-download" aria-hidden="true"></i>
           </a>
         </div>
-  
         <div class="image-wrapper">
-          <img src="images/resume/IMG_1180-min.JPG" alt="Headshot 2" class="headshot-img" />
-          <a href="downloads/IMG_1180.JPG" download="Charlie_Headshot_2" class="download-icon">
-            <i class="fas fa-download"></i>
+          <img src="images/resume/IMG_1180-min.JPG" alt="Charlie Berger headshot, profile view" class="headshot-img" />
+          <a href="downloads/IMG_1180.JPG" download="Charlie_Headshot_2" class="download-icon" aria-label="Download Headshot 2">
+            <i class="fas fa-download" aria-hidden="true"></i>
           </a>
         </div>
-  
         <div class="image-wrapper">
-          <img src="images/resume/IMG_1181-min.JPG" alt="Headshot 3" class="headshot-img" />
-          <a href="downloads/IMG_1181.JPG" download="Charlie_Headshot_3" class="download-icon">
-            <i class="fas fa-download"></i>
+          <img src="images/resume/IMG_1181-min.JPG" alt="Charlie Berger headshot, formal attire" class="headshot-img" />
+          <a href="downloads/IMG_1181.JPG" download="Charlie_Headshot_3" class="download-icon" aria-label="Download Headshot 3">
+            <i class="fas fa-download" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </div>
   </main>
-  
-  
-  
 
-  <!-- JS FOR NAV -->
   <script>
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector(".navbar-nav");
