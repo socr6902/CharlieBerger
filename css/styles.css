@@ -158,3 +158,24 @@ body {
   word-break: break-word;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  z-index: 1000;
+}
