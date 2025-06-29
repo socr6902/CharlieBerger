@@ -12,7 +12,7 @@ body {
   background-color: black;
 }
 
-/* Navbar Container */
+/* Navbar */
 .custom-navbar {
   display: flex;
   justify-content: space-between;
@@ -23,15 +23,11 @@ body {
   top: 0;
   z-index: 10;
 }
-
-/* Logo */
 .navbar-brand {
   font-size: 3rem;
   color: rgb(255, 137, 40);
   font-family: "marvin", sans-serif;
 }
-
-/* Nav List */
 .navbar-nav {
   list-style: none;
   display: flex;
@@ -40,8 +36,6 @@ body {
   margin-right: 2rem;
   align-items: center;
 }
-
-/* Nav Link with Overline Animation */
 .btn-text-stretch {
   position: relative;
   font-family: "Karla", sans-serif;
@@ -51,13 +45,10 @@ body {
   transition: letter-spacing 0.3s ease;
   padding: 0.5rem 0;
 }
-
 .btn-text-stretch:hover {
   color: rgb(255, 137, 40);
   letter-spacing: 1px;
 }
-
-/* Sliding Overline */
 .btn-text-stretch::before {
   content: "";
   position: absolute;
@@ -68,33 +59,27 @@ body {
   background-color: rgb(255, 137, 40);
   transition: width 0.4s ease-in-out;
 }
-
 .btn-text-stretch:hover::before {
   width: 100%;
 }
-
 .navbar-icons {
   display: flex;
   gap: 1rem;
   align-items: center;
   margin-left: 2rem;
 }
-
 .mobile-icons {
   display: none;
 }
-
 .icon-link {
   color: rgb(255, 137, 40);
   font-size: 1.6rem;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
-
 .icon-link:hover {
   opacity: 0.8;
 }
-
 .hamburger {
   position: absolute;
   border: none;
@@ -110,53 +95,40 @@ body {
   .navbar-brand {
     visibility: hidden;
   }
-
   .icon-link {
     font-size: 2vw;
   }
 }
-
 @media (max-width: 1050px) {
   .btn-text-stretch {
     font-size: 2vw;
   }
 }
-
 @media (max-width: 800px) {
   .navbar-nav {
     display: none;
   }
-  
   .navbar-nav.active {
     display: grid;
     position: absolute;
-    top: 70px; /* height of navbar */
+    top: 70px;
     left: 0;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 1rem 0;
-
-    z-index: 9;
     text-align: center;
     background-color: rgba(0, 0, 0, 1);
     z-index: 9;
   }
-
-  .navbar-nav li {
-    list-style: none;
-  }
-
   .navbar-nav a {
     display: block;
     padding: 0.5rem;
     font-size: 1.3rem;
   }
-
   .hamburger {
     display: block;
   }
-
   .navbar-icons {
     display: none;
   }
@@ -169,19 +141,15 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 0.5rem;
   }
-  
   .navbar-nav .mobile-icons a {
     font-size: 1.8rem;
     color: rgb(255, 137, 40);
   }
-  
 }
-
-
 
 /* Hero Section */
 .hero-image {
-  --overlay-darkness: 0; /* JS will update this */
+  --overlay-darkness: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -193,7 +161,6 @@ body {
   background-repeat: no-repeat;
   z-index: -1;
 }
-
 .hero-image::before {
   content: "";
   position: absolute;
@@ -206,7 +173,6 @@ body {
   pointer-events: none;
   transition: background-color 0.4s ease;
 }
-
 .hero-image::after {
   content: "";
   position: absolute;
@@ -218,8 +184,6 @@ body {
   z-index: 0;
 }
 
-
-/* Content overlay */
 .hero-overlay {
   position: relative;
   z-index: 1;
@@ -235,7 +199,6 @@ body {
   align-items: flex-start;
   text-align: center;
 }
-
 .hero-text {
   font-family: "marvin", sans-serif;
   font-weight: 400;
@@ -245,6 +208,7 @@ body {
   color: rgb(255, 137, 40);
 }
 
+/* Screen Reader Only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -257,7 +221,6 @@ body {
   border: 0;
 }
 
-/* About Text */
 .about-text {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -267,6 +230,7 @@ body {
   text-align: left;
 }
 
+/* Carousel */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -276,26 +240,16 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .carousel {
   overflow: hidden;
   width: 100%;
   border-radius: 12px;
 }
-
 .carousel-track {
   display: flex;
   gap: 1.5rem;
   transition: transform 0.5s ease-in-out;
 }
-
-.carousel-track a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
 .carousel-track img {
   height: 400px;
   width: auto;
@@ -303,7 +257,6 @@ body {
   border-radius: 12px;
   object-fit: cover;
 }
-
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -317,19 +270,15 @@ body {
   background: none;
   transition: transform 0.3s ease;
 }
-
 .carousel-btn:hover {
   transform: scale(1.2);
 }
-
 .carousel-btn.left {
   left: -3rem;
 }
-
 .carousel-btn.right {
   right: -3rem;
 }
-
 .carousel-caption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
@@ -343,3 +292,45 @@ body {
   word-break: break-word;
 }
 
+/* Sidenav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #0e1111;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 5rem;
+  z-index: 1000;
+}
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidenav ul li {
+  padding: 16px 24px;
+  border-bottom: 1px solid #333;
+}
+.sidenav ul li a {
+  color: white;
+  font-family: "lato", sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  display: block;
+}
+.sidenav ul li a:hover {
+  color: rgb(255, 137, 40);
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: rgb(255, 137, 40);
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -35,8 +35,24 @@
           <i class="fab fa-instagram"></i>
         </a>
       </li>
-      
     </ul>
+
+    <!-- SIDENAV FOR MOBILE -->
+<div id="mobile-sidenav" class="sidenav">
+  <button class="closebtn" aria-label="Close Menu">&times;</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="mobile-icons" style="display: flex; gap: 1rem; padding-left: 24px; padding-top: 12px;">
+      <a href="mailto:charliesamuelberger@gmail.com" aria-label="Email"><i class="fas fa-envelope" style="font-size: 1.5rem; color: white;"></i></a>
+      <a href="https://www.instagram.com/charlieberger1122/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" style="font-size: 1.5rem; color: white;"></i></a>
+    </li>
+  </ul>
+</div>
+
   
     <div class="navbar-icons">
       <a href="mailto:charliesamuelberger@gmail.com" class="icon-link" aria-label="Email">
@@ -196,13 +212,18 @@
 
 <script>
   const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".navbar-nav");
+  const sidenav = document.getElementById("mobile-sidenav");
+  const closebtn = document.querySelector(".sidenav .closebtn");
 
   hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
+    sidenav.style.width = "250px";
+  });
+
+  closebtn.addEventListener("click", () => {
+    sidenav.style.width = "0";
   });
 </script>
+
 
 <script>
   function updateOverlay() {
