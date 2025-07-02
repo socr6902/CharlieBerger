@@ -17,6 +17,131 @@
     body{
         background-color: #0e1111;
     }
+    .media-videos {
+        margin-bottom: 2rem;
+    }
+
+    .video-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .video-column {
+        max-width: 740px;
+        flex: 0 0 auto;
+    }
+
+    .media-heading-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.75rem; /* aligns better with video column spacing */
+    }
+
+    .media-heading {
+    font-family: "marvin", sans-serif;
+    font-size: 2rem;
+    color: rgb(255, 137, 40);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 1.5s ease forwards;
+    white-space: nowrap;
+    }
+
+
+    @keyframes slideInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 740px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .video-thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: white; /* white by default */
+        transition: all 0.3s ease;
+        pointer-events: none; /* allows the wrapper click to still trigger */
+    }
+
+    .video-wrapper:hover .play-button {
+        color: rgb(255, 137, 40); /* orange on hover */
+        transform: translate(-50%, -50%) scale(1.2); /* slight grow */
+    }
+
+
+    .media-gallery {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 1500px; 
+        margin: 0 auto;
+    }
+
+
+    .gallery-grid img {
+        width: 100%;
+        height: 500px; 
+        object-fit: cover;
+    }
+
+    .photo-top-shift {
+        object-position: center top;
+    }
+
+    @media screen and (max-width: 768px) {
+        .video-row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+
+        .gallery-grid img {
+            height: 300px; 
+        }
+
+        .media-heading {
+            font-size: 1.8rem;
+            text-align: right;
+            white-space: normal;
+        }
+    }
+
+
+
+
+
+
 </style>
 </head>
 
@@ -72,11 +197,51 @@
     </nav>
 
   <!-- PAGE CONTENT -->
-  <main class="page-content" style="padding-top: 7rem; max-width: 900px; margin: 0 auto;">
-    <p class="about-text">sample</p>
+  <main class="page-content" style="padding-top: 7rem;">
+    
+    <section class="media-videos">
+        <div class="media-heading-wrapper">
+          <h2 class="media-heading">Performance Tapes</h2>
+        </div>
+        <div class="video-row">
+          
+          <div class="video-column">
+            <a href="https://drive.google.com/file/d/1y2l6DOIzOmaNko2jU8W2ryvR85O1PYOL/preview" target="_blank" class="video-wrapper">
+              <img class="video-thumbnail" src="images/media/thumb1.jpg" alt="Google Drive Video 1" />
+              <div class="play-button"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+      
+          <div class="video-column">
+            <a href="https://drive.google.com/file/d/106FE07uPBq_fd1lg33NOVc9a4JMVsykI/preview" target="_blank" class="video-wrapper">
+              <img class="video-thumbnail" src="images/media/thumb2.jpg" alt="Google Drive Video 2" />
+              <div class="play-button"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+      
+        </div>
+      </section>
+      
+      
+      <section class="media-gallery">
+        <div class="media-heading-wrapper">
+            <h2 class="media-heading">Gallery</h2>
+          </div>
+        <div class="gallery-grid">
+          <img src="images/media/Branding_1-min.jpg" alt="Media 1" class="photo-top-shift" />
+          <img src="images/media/Branding_2-min.jpg" alt="Media 2" />
+          <img src="images/media/Branding_4-min.jpg" alt="Media 3" />
+          <img src="images/media/Branding_5-min.jpg" alt="Media 4" />
+          <img src="images/media/Branding_6-min.jpg" alt="Media 5" />
+          <img src="images/media/Branding_8-min.jpg" alt="Media 6" />
+        </div>
+      </section>
+      
   </main>
 
   <!-- JS FOR NAV -->
   <script src="js/navbar.js" defer></script>
+
+  
 </body>
 </html>
