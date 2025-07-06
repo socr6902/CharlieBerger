@@ -29,8 +29,12 @@
     }
 
     .video-column {
-        max-width: 740px;
-        flex: 0 0 auto;
+      max-width: 740px;
+      width: 100%;
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .media-heading-wrapper {
@@ -115,6 +119,33 @@
     .photo-top-shift {
         object-position: center top;
     }
+
+  
+
+    .video-description-wrapper {
+      margin-top: 0.5rem;
+      color: #e0e0e0;
+      font-family: "Lato", sans-serif;
+      text-align: left;
+      width: 100%;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+
+    .video-description-title {
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: rgb(255, 137, 40); /* Optional: orange to match theme */
+    }
+
+    .video-description-text {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: white;
+    }
+
 
     @media screen and (max-width: 768px) {
         .video-row {
@@ -210,6 +241,11 @@
               <img class="video-thumbnail" src="images/media/thumb1.jpg" alt="Google Drive Video 1" />
               <div class="play-button"><i class="fas fa-play"></i></div>
             </a>
+            <div class="video-description-wrapper">
+              <div class="video-description-title">Greg (Succession)</div>
+              <div class="video-description-text">Description of the scene goes here.</div>
+            </div>
+            
           </div>
       
           <div class="video-column">
@@ -217,6 +253,10 @@
               <img class="video-thumbnail" src="images/media/thumb2.jpg" alt="Google Drive Video 2" />
               <div class="play-button"><i class="fas fa-play"></i></div>
             </a>
+            <div class="video-description-wrapper">
+              <div class="video-description-title">Nathan (The Rehearsal)</div>
+              <div class="video-description-text">Description of the scene goes here.</div>
+            </div>
           </div>
       
         </div>
