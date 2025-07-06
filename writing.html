@@ -16,7 +16,78 @@
   <style>
     body{
         background-color: #0e1111;
+        padding-top: 30px;
     }
+    .writing-page {
+      padding: 6rem 1.5rem 3rem;
+      background-color: #0e1111;
+      color: white;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .writing-heading {
+      font-family: "marvin", sans-serif;
+      font-size: 2rem;
+      color: rgb(255, 137, 40);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .writing-subtext {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .writing-entry {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .writing-title {
+      font-family: "marvin", sans-serif;
+      font-size: 1.3rem;
+      color: rgb(255, 137, 40);
+      margin-bottom: 0.25rem;
+    }
+
+    .writing-type {
+      font-style: italic;
+      color: #999;
+      margin-bottom: 0.75rem;
+    }
+
+    .writing-description {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .writing-link {
+      display: inline-block;
+      color: rgb(255, 137, 40);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    @media screen and (max-width: 600px) {
+      .writing-entry {
+        padding: 1rem;
+      }
+
+      .writing-title {
+        font-size: 1.15rem;
+      }
+
+      .writing-description {
+        font-size: 0.95rem;
+      }
+    }
+
 </style>
 </head>
 
@@ -72,9 +143,33 @@
     </nav>
 
   <!-- PAGE CONTENT -->
-  <main class="page-content" style="padding-top: 7rem; max-width: 900px; margin: 0 auto;">
-    <p class="about-text">sample</p>
+  <main class="writing-page">
+    <section class="writing-intro">
+      <!-- <h2 class="writing-heading">Writing</h2> -->
+      <p class="writing-subtext">A few selected scripts with summaries and links to read more.</p>
+    </section>
+  
+    <section class="writing-entries">
+      <div class="writing-entry">
+        <h3 class="writing-title">Clean the Bloody Slop Bins</h3>
+        <p class="writing-type">(Play)</p>
+        <p class="writing-description">
+          In old Britannia, a moronic King rules his kingdom with a (not so) iron fist. After a series of poor decisions, peasants request his aid in the kingdom’s various farcical problems and shortcomings that the King has idiotically caused. Finally, the King’s world is brought to a staggering halt when the Queen declares she would like a divorce. Unable to put his ego aside, the King is left speechless. As the day falls into absurdity, the King slowly realizes his grasp on the Kingdom and its culture is not quite what he thought it was. This farcical romp in the nonsensical world of uneducated kings invites hilarity and a shift in power for a ruler with no reason to hold the throne. This ten minute comedy was featured in the New York Theater Festival in 2024, where it was nominated in the Best Short category and actor Buff Thiesmeyer won in the Best Actor category. There is also a one act version of the play that Charlie would love to produce!
+        </p>
+        <a href="https://docs.google.com/document/d/15APaNDVx21Pz3BY5iW1wybHsPy0TyxrKnYq7AagIYmk" class="writing-link" target="_blank">Read the script</a>
+      </div>
+  
+      <div class="writing-entry">
+        <h3 class="writing-title">S'mores</h3>
+        <p class="writing-type">(Sketch)</p>
+        <p class="writing-description">
+          Highlighting from his Sketch writing, this sketch starts with a group of friends at a campfire and turns into a passionate then heated song when Charlie finds out one of his friends has never eaten a S'more before. Taking inspiration from some of the greats of sketch comedy, Charlie would love to develop a show with sketches of this style for a sketch comedy show.
+        </p>
+        <a href="https://docs.google.com/document/d/1dPV98x-ZsuHeu7dkETXxWktrho5ModmzzMDSVR8f0RM" class="writing-link" target="_blank">Read the sketch</a>
+      </div>
+    </section>
   </main>
+  
 
   <!-- JS FOR NAV -->
   <script src="js/navbar.js" defer></script>
