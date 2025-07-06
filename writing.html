@@ -40,27 +40,40 @@
       color: #ccc;
     }
 
+    .writing-entries {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
     .writing-entry {
-      max-width: 800px;
-      margin: 0 auto 2rem;
+      flex: 1 1 400px;
+      max-width: 600px;
+      min-width: 300px;
+      margin: 0;
       background-color: #1a1a1a;
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
     }
 
     .writing-title {
       font-family: "marvin", sans-serif;
       font-size: 1.3rem;
       color: rgb(255, 137, 40);
-      margin-bottom: 0.25rem;
+      margin: 0 0 0.25rem;
+      text-transform: uppercase;
     }
 
     .writing-type {
       font-style: italic;
       color: #999;
-      margin-bottom: 0.75rem;
+      margin: 0 0 0.75rem;
     }
+
 
     .writing-description {
       font-size: 1rem;
@@ -68,7 +81,8 @@
     }
 
     .writing-link {
-      display: inline-block;
+      align-self: flex-start; /* Optional: keep it on the left */
+      margin-top: auto;
       color: rgb(255, 137, 40);
       text-decoration: underline;
       font-weight: 500;
@@ -146,7 +160,7 @@
   <main class="writing-page">
     <section class="writing-intro">
       <!-- <h2 class="writing-heading">Writing</h2> -->
-      <p class="writing-subtext">A few selected scripts with summaries and links to read more.</p>
+      <p class="writing-subtext">A few select scripts from Charlie Berger</p>
     </section>
   
     <section class="writing-entries">
