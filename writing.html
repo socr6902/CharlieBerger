@@ -41,11 +41,13 @@
     }
 
     .writing-entries {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+      justify-items: center;
     }
+
+
 
     .writing-entry {
       flex: 1 1 400px;
@@ -88,19 +90,14 @@
       font-weight: 500;
     }
 
-    @media screen and (max-width: 600px) {
-      .writing-entry {
-        padding: 1rem;
-      }
-
-      .writing-title {
-        font-size: 1.15rem;
-      }
-
-      .writing-description {
-        font-size: 0.95rem;
+    @media screen and (max-width: 700px) {
+      .writing-entries {
+        grid-template-columns: 1fr;
       }
     }
+
+
+    
 
 </style>
 </head>
@@ -165,7 +162,7 @@
   
     <section class="writing-entries">
       <div class="writing-entry">
-        <h3 class="writing-title">Clean the Bloody Slop Bins</h3>
+        <h3 class="writing-title">Clean the Bloody Slop Bins - (10 minute play)</h3>
         <p class="writing-type">(Play)</p>
         <p class="writing-description">
           In old Britannia, a moronic King rules his kingdom with a (not so) iron fist. After a series of poor decisions, peasants request his aid in the kingdom’s various farcical problems and shortcomings that the King has idiotically caused. Finally, the King’s world is brought to a staggering halt when the Queen declares she would like a divorce. Unable to put his ego aside, the King is left speechless. As the day falls into absurdity, the King slowly realizes his grasp on the Kingdom and its culture is not quite what he thought it was. This farcical romp in the nonsensical world of uneducated kings invites hilarity and a shift in power for a ruler with no reason to hold the throne. This ten minute comedy was featured in the New York Theater Festival in 2024, where it was nominated in the Best Short category and actor Buff Thiesmeyer won in the Best Actor category. There is also a one act version of the play that Charlie would love to produce!
@@ -174,12 +171,30 @@
       </div>
   
       <div class="writing-entry">
-        <h3 class="writing-title">S'mores</h3>
+        <h3 class="writing-title">S'mores - (Sketch)</h3>
         <p class="writing-type">(Sketch)</p>
         <p class="writing-description">
           Highlighting from his Sketch writing, this sketch starts with a group of friends at a campfire and turns into a passionate then heated song when Charlie finds out one of his friends has never eaten a S'more before. Taking inspiration from some of the greats of sketch comedy, Charlie would love to develop a show with sketches of this style for a sketch comedy show.
         </p>
         <a href="https://docs.google.com/document/d/1dPV98x-ZsuHeu7dkETXxWktrho5ModmzzMDSVR8f0RM" class="writing-link" target="_blank">Read the sketch</a>
+      </div>
+
+      <div class="writing-entry">
+        <h3 class="writing-title">Terminal Pink - (One Act Play)</h3>
+        <p class="writing-type">(One Act Play)</p>
+        <p class="writing-description">
+          A businessman's flight delay leads him to a typical layover in a hotel room, but he quickly finds this night is not what he anticipated after a mysterious visit from a woman dressed entirely in pink. She may be the answer he needs from his mundane life, or might she mark the end of it?
+        </p>
+        <a href="https://docs.google.com/document/d/13y1CZuZxWy_pEKf07m_0Gk7d4jAyV1RRXi1071_2OYY/edit?usp=sharing" class="writing-link" target="_blank">Read the script</a>
+      </div>
+
+      <div class="writing-entry">
+        <h3 class="writing-title">An Almond Joy - (Scene)</h3>
+        <p class="writing-type">(Scene)</p>
+        <p class="writing-description">
+          A short study of married life for an elderly couple on a relaxed sunny day. The beauty of life is found in tiny moments like these.
+        </p>
+        <a href="https://docs.google.com/document/d/1vh73vUpmbf9eC3V4IvMOFYfRmVrrT3b8ac4EN6Q0zSc/edit?usp=sharing" class="writing-link" target="_blank">Read the scene</a>
       </div>
     </section>
   </main>
