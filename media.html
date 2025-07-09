@@ -38,22 +38,22 @@
     }
 
     .media-heading-wrapper {
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 0.75rem; /* aligns better with video column spacing */
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0.75rem; 
     }
 
     .media-heading {
-    font-family: "marvin", sans-serif;
-    font-size: 2rem;
-    color: rgb(255, 137, 40);
-    margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideInRight 1.5s ease forwards;
-    white-space: nowrap;
+      font-family: "marvin", sans-serif;
+      font-size: 2rem;
+      color: rgb(255, 137, 40);
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 1.5s ease forwards;
+      white-space: nowrap;
     }
 
 
@@ -85,14 +85,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 3rem;
-        color: white; /* white by default */
+        color: white; 
         transition: all 0.3s ease;
-        pointer-events: none; /* allows the wrapper click to still trigger */
+        pointer-events: none; 
     }
 
     .video-wrapper:hover .play-button {
-        color: rgb(255, 137, 40); /* orange on hover */
-        transform: translate(-50%, -50%) scale(1.2); /* slight grow */
+        color: rgb(255, 137, 40); 
+        transform: translate(-50%, -50%) scale(1.2); 
     }
 
     .media-row-images {
@@ -105,14 +105,12 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin: 0 auto;
-      padding: 0 1rem;
     }
 
     .stills-grid img {
       width: 100%;
       height: 400px;
       object-fit: cover;
-      border-radius: 4px;
     }
 
     @media screen and (max-width: 1024px) {
@@ -133,7 +131,7 @@
 
     .media-gallery {
         margin-top: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .gallery-grid {
@@ -172,7 +170,7 @@
       font-weight: bold;
       font-size: 0.95rem;
       margin-bottom: 0.25rem;
-      color: rgb(255, 137, 40); /* Optional: orange to match theme */
+      color: rgb(255, 137, 40);
     }
 
     .video-description-text {
