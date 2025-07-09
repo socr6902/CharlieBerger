@@ -24,6 +24,14 @@
       color: white;
       font-family: 'Lato', sans-serif;
     }
+    
+    @media screen and (min-width: 1900px) {
+      .writing-page {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+
 
     .writing-heading {
       font-family: "marvin", sans-serif;
@@ -51,7 +59,7 @@
 
     .writing-entry {
       flex: 1 1 400px;
-      max-width: 600px;
+      max-width: 900px;
       min-width: 300px;
       margin: 0;
       background-color: #1a1a1a;
@@ -95,6 +103,39 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media screen and (min-width: 1600px) {
+      .writing-page {
+        max-width: 1800px;
+        padding: 5rem 2rem;
+      }
+
+      .writing-entry {
+        max-width: 1000px;
+        padding: 2rem;
+      }
+
+      .writing-title {
+        font-size: 1.6rem;
+      }
+
+      .writing-type {
+        font-size: 1.1rem;
+      }
+
+      .writing-description {
+        font-size: 1.2rem;
+      }
+
+      .writing-link {
+        font-size: 1.1rem;
+      }
+
+      .writing-subtext {
+        font-size: 1.1rem;
+      }
+    }
+
 
 
     
