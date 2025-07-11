@@ -80,8 +80,9 @@
 
     .writing-type {
       font-style: italic;
-      color: #999;
       margin: 0 0 0.75rem;
+      color: #e0e0e0;
+        font-weight: 300;
     }
 
 
@@ -91,12 +92,22 @@
     }
 
     .writing-link {
-      align-self: flex-start; /* Optional: keep it on the left */
+      align-self: flex-start; 
       margin-top: auto;
       color: rgb(255, 137, 40);
       text-decoration: underline;
       font-weight: 500;
     }
+
+    @media screen and (max-width: 700px) {
+      .writing-description,
+      .writing-subtext,
+      .writing-type {
+        color: #e0e0e0; 
+        font-weight: 300; 
+      }
+    }
+
 
     @media screen and (max-width: 700px) {
       .writing-entries {
