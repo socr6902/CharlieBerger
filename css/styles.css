@@ -157,9 +157,9 @@ body {
   right: -3rem;
 }
 
-@media screen and (min-width: 1900px){
+@media screen and (min-width: 500px){
   .carousel-btn.left {
-    left: 0.5rem; /* or whatever keeps it visually nice but inside the page */
+    left: 0.5rem;
   }
   
   .carousel-btn.right {
