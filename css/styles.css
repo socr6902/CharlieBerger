@@ -156,6 +156,18 @@ body {
 .carousel-btn.right {
   right: -3rem;
 }
+
+@media screen and (min-width: 1900px){
+  .carousel-btn.left {
+    left: 0.5rem; /* or whatever keeps it visually nice but inside the page */
+  }
+  
+  .carousel-btn.right {
+    right: 0.5rem;
+  }
+}
+
+
 .carousel-caption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
