@@ -179,7 +179,7 @@ body {
   word-break: break-word;
   text-align: left;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .carousel-container {
     display: none !important;
   }
