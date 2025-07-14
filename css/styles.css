@@ -14,7 +14,7 @@ body {
   font-weight: 100;
   color: white;
   overflow-x: hidden;
-  background-color: black;
+  background-color: #0e1111;
 }
 
 
@@ -75,11 +75,11 @@ body {
 
 @media(max-width: 800px){
   .hero-overlay {
-    margin-top: 1rem;
-    padding-top: 30px;
+    margin-top: 50px;
+
   }
   .hero-text {
-    padding-bottom:15px;
+    padding-bottom:20px;
   }
 }
 
