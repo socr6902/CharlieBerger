@@ -11,18 +11,5 @@
     sidenav.style.width = "0";
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelector(".custom-navbar");
-  
-    function toggleShadow() {
-      if (window.scrollY > 10) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    }
-  
-    toggleShadow();                
-    window.addEventListener("scroll", toggleShadow);
-  });
+
   
