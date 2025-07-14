@@ -41,7 +41,7 @@
 }
 
 .resume-layout {
-  padding: 0rem 1rem 2rem; /* top, left/right, bottom */
+  padding: 0rem 0rem 2rem; /* top, left/right, bottom */
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -137,13 +137,12 @@ button:focus {
   outline-offset: 4px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .resume-heading {
     width: 100%;
-    font-size: clamp(2.5rem, 4vw, 3rem);
-    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: left;
     margin-bottom: 2rem;
-    padding-left: 10px;
   }
 
   .grid-row {
