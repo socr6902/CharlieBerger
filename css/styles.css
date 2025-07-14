@@ -74,10 +74,6 @@ body {
 }
 
 @media(max-width: 800px){
-  .hero-overlay {
-    margin-top: 50px;
-
-  }
   .hero-text {
     padding-bottom:20px;
   }
