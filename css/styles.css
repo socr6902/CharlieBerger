@@ -77,11 +77,13 @@ body {
   .hero-text {
     padding-bottom: 20px;
   }
-  .hero-overlay{
-    padding-bottom: 10rem;
+
+  .hero-overlay {
+    padding-bottom: 160px; 
+    margin-bottom: env(safe-area-inset-bottom, 0); 
   }
-  
 }
+
 
 @media (min-width: 1300px) {
   .hero-overlay {
