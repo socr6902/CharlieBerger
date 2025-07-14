@@ -166,9 +166,6 @@ body {
 .carousel-btn.right {
   right: -3rem;
 }
-
-
-
 .carousel-caption {
   margin-top: 0.5rem;
   font-size: 0.875rem;
@@ -181,6 +178,11 @@ body {
   max-width: 100%;
   word-break: break-word;
   text-align: left;
+}
+@media (max-width: 768px) {
+  .carousel-container {
+    display: none !important;
+  }
 }
 
 .skip-link {
