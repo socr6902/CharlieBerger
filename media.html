@@ -103,10 +103,11 @@
 
     .stills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       margin: 0 auto;
     }
+
 
     .stills-grid img {
       width: 100%;
@@ -187,7 +188,12 @@
       color: white;
     }
 
-    
+    .stills-grid video {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
 
 
     @media screen and (max-width: 768px) {
@@ -286,7 +292,6 @@
             </a>
             <div class="video-description-wrapper">
               <div class="video-description-title">Greg (Succession)</div>
-              <div class="video-description-text">Description of the scene goes here.</div>
             </div>
             
           </div>
@@ -298,7 +303,6 @@
             </a>
             <div class="video-description-wrapper">
               <div class="video-description-title">Nathan (The Rehearsal)</div>
-              <div class="video-description-text">Description of the scene goes here.</div>
             </div>
           </div>
       
@@ -307,14 +311,26 @@
 
       <section class="media-row-images">
         <div class="media-heading-wrapper">
-          <h2 class="media-heading">Stills</h2>
+          <h2 class="media-heading">Live Highlights</h2>
         </div>
         <div class="stills-grid">
+          <!-- Row 1 -->
+          <video controls>
+            <source src="images/media/rotate.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <img src="images/media/IMG_4646-min.jpg" alt="Still 1" />
           <img src="images/media/IMG_0784-min.jpg" alt="Still 2" />
+        
+          <!-- Row 2 -->
+          <video controls>
+            <source src="images/media/IMG_8765.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
           <img src="images/media/DSC09184-min.jpg" alt="Still 3" />
           <img src="images/media/IMG_6469-min.jpg" alt="Still 4" />
         </div>
+        
       </section>
       
       <section class="media-gallery">
