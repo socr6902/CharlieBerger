@@ -193,4 +193,59 @@
       }
 
       function nextImage() {
-        index = (i
+        index = (index + 1) % items.length;
+        scrollToImage(index);
+      }
+
+      function prevImage() {
+        index = (index - 1 + items.length) % items.length;
+        scrollToImage(index);
+      }
+
+      let autoScroll = setInterval(() => {
+        if (autoScrollActive) nextImage();
+      }, 5000);
+
+      function disableAutoScroll() {
+        autoScrollActive = false;
+        clearInterval(autoScroll);
+      }
+
+      nextBtn.addEventListener("click", () => {
+        disableAutoScroll();
+        nextImage();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        disableAutoScroll();
+        prevImage();
+      });
+
+      scrollToImage(index);
+    });
+  </script>
+
+
+<script>
+  function updateOverlay() {
+    const hero = document.querySelector('.hero-image');
+    const width = window.innerWidth;
+    let opacity = 0;
+
+    if (width < 1300) opacity = 0.3;
+    if (width < 1100) opacity = 0.4;
+    if (width < 900)  opacity = 0.5;
+    if (width < 700)  opacity = 0.6;
+    if (width < 500)  opacity = 0.75;
+
+    hero.style.setProperty('--overlay-darkness', opacity);
+  }
+
+  window.addEventListener('resize', updateOverlay);
+  window.addEventListener('load', updateOverlay);
+</script>
+
+<script src="js/navbar.js" defer></script>
+
+</body>
+</html>
