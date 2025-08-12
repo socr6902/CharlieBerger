@@ -217,7 +217,79 @@ body {
   /* KEEP your image size changes */
   .carousel-track img {
     display: block;          /* remove baseline gap */
-    height: 200px;           /* uniform height */
+    height: 275px;           /* uniform height */
+    width: auto;             /* varying widths allowed */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Caption must exactly match the image/slide width */
+  .carousel-caption {
+    display: block;
+    width: 100%;             /* fill slide width (image width) */
+    box-sizing: border-box;  /* include padding inside width */
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.35;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px 6px;
+    border-radius: 6px;
+    text-align: left;
+
+    /* prevent caption from widening the slide */
+    overflow-wrap: anywhere; /* break long words/URLs */
+    word-break: normal;
+    white-space: normal;
+  }
+
+  /* KEEP your button changes */
+  .carousel-btn {
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: rgb(255, 137, 40);
+    background: none;
+    top: calc(50% - 12px);
+  }
+  .carousel-btn.left  { left: -30px; }
+  .carousel-btn.right { right: -30px; }
+}
+
+@media (max-width: 500px) {
+  html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  .carousel-container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    margin-top: 1rem;
+  }
+
+  .carousel-track {
+    gap: 8px;                /* even spacing between slides */
+    align-items: flex-start;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* The slide’s width must come from the image */
+  .carousel-item {
+    display: inline-block;   /* shrink-wrap to its contents */
+    vertical-align: top;
+  }
+
+  /* Anchor should be block so its width = image width */
+  .carousel-item > a {
+    display: block;
+  }
+
+  /* KEEP your image size changes */
+  .carousel-track img {
+    display: block;          /* remove baseline gap */
+    height: 190px;           /* uniform height */
     width: auto;             /* varying widths allowed */
     object-fit: cover;
     border-radius: 10px;
