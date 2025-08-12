@@ -217,7 +217,7 @@ body {
   /* KEEP your image size changes */
   .carousel-track img {
     display: block;          /* remove baseline gap */
-    height: 245px;           /* uniform height */
+    height: 200px;           /* uniform height */
     width: auto;             /* varying widths allowed */
     object-fit: cover;
     border-radius: 10px;
