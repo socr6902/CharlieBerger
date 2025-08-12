@@ -184,6 +184,10 @@ body {
   word-break: break-word;
   text-align: left;
 }
+
+.desktop-caption { display: block; }
+.mobile-caption { display: none; }
+
 @media (max-width: 600px) {
   html, body {
     -webkit-text-size-adjust: none;
@@ -251,6 +255,9 @@ body {
   }
   .carousel-btn.left  { left: -30px; }
   .carousel-btn.right { right: -30px; }
+
+  .desktop-caption { display: none; }
+  .mobile-caption { display: block; }
 }
 
 
