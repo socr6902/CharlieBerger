@@ -256,8 +256,8 @@ body {
   .carousel-btn.left  { left: -30px; }
   .carousel-btn.right { right: -30px; }
 
-  .desktop-caption { display: none; }
-  .mobile-caption { display: block; }
+  .carousel-caption.desktop-caption { display: none !important; }
+  .carousel-caption.mobile-caption  { display: block !important; }
 }
 
 
