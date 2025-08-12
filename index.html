@@ -187,10 +187,10 @@
       let autoScrollActive = true;
 
       function scrollToImage(i) {
-        const img = items[i].querySelector("img");
-        const imgLeft = img.offsetLeft;
-        track.style.transform = `translateX(-${imgLeft}px)`;
+        const left = items[i].offsetLeft;   // use the slide’s left, not the img’s
+        track.style.transform = `translateX(-${left}px)`;
       }
+
 
       function nextImage() {
         index = (index + 1) % items.length;
