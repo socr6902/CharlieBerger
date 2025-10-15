@@ -57,6 +57,52 @@
       white-space: nowrap;
     }
 
+    /* === REEL VIDEO  === */
+    #reels .video-column {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto; 
+    }
+
+    #reels .video-wrapper {
+      width: 100%;
+    }
+
+    #reels video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+
+    #reels .video-description-wrapper {
+      position: static !important;  
+      display: block;
+      margin-top: 0.75rem;
+      padding: 0 0.5rem;
+      max-width: 100%;
+      text-align: left;
+      white-space: normal;
+      overflow-wrap: anywhere;     
+    }
+
+    #reels .video-description-title {
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: rgb(255, 137, 40);
+    }
+
+    #reels .video-description-text {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: white;
+    }
+
+
+
+
 
     @keyframes slideInRight {
         to {
@@ -278,6 +324,31 @@
 
   <!-- PAGE CONTENT -->
   <main class="page-content">
+
+    <section class="media-videos" id="reels">
+      <div class="media-heading-wrapper">
+        <h2 class="media-heading">Reels</h2>
+      </div>
+    
+      <div class="video-row">
+        <div class="video-column">
+          <div class="video-wrapper">
+            <video controls preload="metadata" poster="images/media/video_thumb.png">
+              <source src="images/media/CharlieBerger_ComedyReel.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+    
+            <div class="video-description-wrapper">
+              <div class="video-description-title">Comedy Reel (2025)</div>
+              <p class="video-description-text">
+                Highlights from recent stage and on-camera work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>    
+
     
     <section class="media-videos">
         <div class="media-heading-wrapper">
